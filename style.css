@@ -1,0 +1,47 @@
+.cool-link {
+  color: #ff4757; /* Vibrant coral/red */
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+/* Create the custom underline */
+.cool-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0); /* Hide it initially */
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ff4757;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out; /* Smooth animation */
+}
+
+/* Animate the line on hover and focus */
+.cool-link:hover::after,
+.cool-link:focus::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.cool-text {
+    color:rgb(143, 255, 248);
+}
+
+html {
+    background-color: black;
+    color: white;
+}
+
+.title {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap:5px;
+}
+
+#smallpls {
+    font-size: 10px;
+}
